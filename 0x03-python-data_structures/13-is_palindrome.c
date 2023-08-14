@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include "list.h"
+#include "lists.h"
 
 /**
  * is_palindrome - Checks if a singly linked list is a palindrome.
@@ -53,7 +53,7 @@ int is_palindrome(listint_t **head)
 	/* Compare the first and second halves of the linked list */
 	while (list1 != NULL && list2 != NULL)
 	{
-		if (list->n != list2->n)
+		if (list1->n != list2->n)
 		{
 			is_palindrome = 0;
 			break;
@@ -63,7 +63,7 @@ int is_palindrome(listint_t **head)
 	}
 	/* Restore the reversed second half */
 	prev = NULL;
-	current = second_half
+	current = second_half;
 		while (current != NULL)
 		{
 			next_node = current->next;
