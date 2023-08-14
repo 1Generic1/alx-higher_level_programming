@@ -57,6 +57,7 @@ int is_palindrome(listint_t **head)
 	{
 		return (1);
 	}
+	listint_t *fast = *head;
 	listint_t *slow = *head;
 	listint_t *prev_slow = NULL;
 	listint_t *mid = NULL;
@@ -67,10 +68,14 @@ int is_palindrome(listint_t **head)
 
 	/* Find the middle of the linked list using slow and fast pointers */
 	mid = find_middle(*head);
-	prev_slow = mid;
+	prev_slow = NULL;
+	slow = mid;
+	if (fast != NULL)
+	{
+		mid = slow;
+		slow = slow->next;
+	}
 	/* Reverse the second half of the linked list */
-	second_half = slow;
-	prev_slow->next = NULL;
 	second_half = reverse_list(second_half);
 	/* Compare the first and second halves of the linked list */
 	while (list1 != NULL && list2 != NULL)
