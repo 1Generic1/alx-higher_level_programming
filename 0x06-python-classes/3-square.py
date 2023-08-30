@@ -3,7 +3,7 @@
 
 
 class Square:
-    """ A class Square that defines a square the size 
+    """ A class Square that defines a square the size
     must be an integer, with private instance attribute size
     and public instance metthond """
     def __init__(self, size=0):
@@ -12,6 +12,7 @@ class Square:
             raise TypeError("size must be an integer")
         if size < 0:
             raise ValueError("size must be >= 0")
+
     def area(self):
         area = self.__size * self.__size
         return area
