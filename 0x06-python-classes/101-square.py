@@ -50,7 +50,7 @@ class Square:
             square_str += "\n"
         for _ in range(self.__size):
             square_str += " " * self.__position[0] + "#" * self.__size + "\n"
-        return square_str
+        return square_str.rstrip("\n")
 
     def __str__(self):
         return self.my_print()
