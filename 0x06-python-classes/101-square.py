@@ -43,8 +43,7 @@ class Square:
 
     def my_print(self):
         if self.__size == 0:
-            print()
-            return
+            return ""
         square_str = ""
         for _ in range(self.__position[1]):
             square_str += "\n"
