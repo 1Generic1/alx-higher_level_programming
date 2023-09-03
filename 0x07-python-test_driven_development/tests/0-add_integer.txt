@@ -1,0 +1,63 @@
+"""
+this is the test file for the add_integer function
+
+Importing function from the module:
+	>>> add_integer = __import__('0-add_integer').add_integer
+
+Adding 1 and 2
+	>>> add_integer(1, 2)
+	3
+
+Adding -1 and 2
+	>>> add_integer(-1, 2)
+	1
+
+Adding 3.5 and 2
+	>>> add_integer(3.5, 2)
+	5
+
+Adding 2.5 and 3.5
+	>>> add_integer(2.5, 3.5)
+	6
+
+Adding 5.6 and -2.4
+	>>> add_integer(5.6, -2.4)
+	3
+
+Adding 5.6 and string
+	>>> add_integer(5.6, "string")
+	Traceback (most recent call last):
+		...
+	TypeError: b must be an integer
+
+Adding string and 2.5
+	>>> add_integer("string", 2.5)
+	Traceback (most recent call last):
+		...
+	TypeError: a must be an integer
+
+Adding None and 5
+	>>> add_integer(None, 5)
+	Traceback (most recent call last):
+    		...
+	TypeError: a must be an integer
+
+Adding 10 and None
+	>>> add_integer(10, None)
+	Traceback (most recent call last):
+	    ...
+	TypeError: b must be an integer
+
+Adding None and None
+	>>> add_integer(None, None)	
+	Traceback (most recent call last):
+		    ...
+	TypeError: a must be an integer
+
+Adding None
+	>>> add_integer(None)
+	Traceback (most recent call last):
+	    ...
+	TypeError: a must be an integer
+
+"""
