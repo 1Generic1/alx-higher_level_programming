@@ -36,7 +36,7 @@
 
 ## 0-add_integer.py, tests/0-add_integer.txt
 
-+ Write a function that adds 2 integers.
+- Write a function that adds 2 integers.
 
 	- Prototype: def add_integer(a, b=98):
 	- a and b must be integers or floats, otherwise raise a TypeError exception with the message a must be an integer or b must be an integer
@@ -46,7 +46,7 @@
 
 ## 2-matrix_divided.py, tests/2-matrix_divided.txt
 
-> Write a function that divides all elements of a matrix.
++ Write a function that divides all elements of a matrix.
 
 	- Prototype: def matrix_divided(matrix, div):
 	- matrix must be a list of lists of integers or floats, otherwise raise a TypeError exception with the message matrix must be a matrix (list of lists) of integers/floats
@@ -56,3 +56,11 @@
 	> All elements of the matrix should be divided by div, rounded to 2 decimal places
 	* Returns a new matrix
 	+ You are not allowed to import any module
+
+## 3-say_my_name.py, tests/3-say_my_name.txt
+
+# Write a function that prints My name is <first name> <last name>
+
+	- Prototype: def say_my_name(first_name, last_name=""):
+	- first_name and last_name must be strings otherwise, raise a TypeError exception with the message first_name must be a string or last_name must be a string
+	- You are not allowed to import any module
