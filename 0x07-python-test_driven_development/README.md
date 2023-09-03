@@ -36,7 +36,7 @@
 
 ## 0-add_integer.py, tests/0-add_integer.txt
 
-Write a function that adds 2 integers.
++ Write a function that adds 2 integers.
 
 	- Prototype: def add_integer(a, b=98):
 	- a and b must be integers or floats, otherwise raise a TypeError exception with the message a must be an integer or b must be an integer
@@ -46,7 +46,7 @@ Write a function that adds 2 integers.
 
 ## 2-matrix_divided.py, tests/2-matrix_divided.txt
 
-Write a function that divides all elements of a matrix.
+> Write a function that divides all elements of a matrix.
 
 	- Prototype: def matrix_divided(matrix, div):
 	- matrix must be a list of lists of integers or floats, otherwise raise a TypeError exception with the message matrix must be a matrix (list of lists) of integers/floats
