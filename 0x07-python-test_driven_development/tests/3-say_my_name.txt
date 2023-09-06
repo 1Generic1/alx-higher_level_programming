@@ -1,0 +1,39 @@
+"""
+This is the test file for the say_my_name function.
+
+Importing function from the module:
+>>> say_my_name = __import__('3-say_my_name').say_my_name
+
+# Test Case 1: Print the full name
+>>> say_my_name("John", "Doe")
+My name is John Doe
+John Doe
+
+# Test Case 2: Print only the first name
+>>> say_my_name("Alice")
+My name is Alice 
+Alice
+
+# Test Case 3: Providing non-string values for first_name (should raise TypeError)
+>>> say_my_name(123, "Smith")
+Traceback (most recent call last):
+    ...
+TypeError: first_name must be a string
+
+# Test Case 4: Providing non-string values for last_name (should raise TypeError)
+>>> say_my_name("Jane", 456)
+Traceback (most recent call last):
+    ...
+TypeError: last_name must be a string
+
+# Test Case 5: Test when both first_name and last_name are empty strings
+>>> say_my_name("", "")
+My name is  
+ 
+
+# Test Case 6: Print a name with one space as the last name
+>>> say_my_name("John", " ")
+My name is John  
+John  
+
+"""
