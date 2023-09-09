@@ -1,0 +1,3 @@
+git add .
+git commit -m "Everything is object"
+git push
