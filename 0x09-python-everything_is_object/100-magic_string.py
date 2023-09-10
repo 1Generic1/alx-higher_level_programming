@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-def magic_string(n):
+""" function that returns a string "Best School" """
+def magic_string(n=1):
     return "BestSchool" * n
