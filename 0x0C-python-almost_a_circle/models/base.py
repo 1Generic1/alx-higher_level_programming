@@ -6,14 +6,17 @@ class Base:
     """Initialize a Base instance with a unique ID.
 
         Args:
-            id (int): The ID to assign to the instance. If None, a new ID will be generated.
+            id (int): The ID to assign to the instance.
+            If None, a new ID will be generated.
     """
     __nb_objects = 0
+
     def __init__(self, id=None):
         """Initialize a Base instance with a unique ID.
 
         Args:
-            id (int): The ID to assign to the instance. If None, a new ID will be generated.
+            id (int): The ID to assign to the instance.
+            If None, a new ID will be generated.
         """
         if id is not None:
             self.id = id
