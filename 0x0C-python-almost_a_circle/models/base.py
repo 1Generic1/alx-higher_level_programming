@@ -59,3 +59,26 @@ class Base:
             return json.loads(json_string)
         except json.JSONDecodeError:
             return []
+
+    @classmethod
+    def create(cls, **dictionary):
+        if cls.__name__ == "Rectangle":
+            dummy = cls(1, 1)
+        elif cls.__name__ == "Square":
+            dummy = cls(1)
+        dummy.update(**dictionary)
+        return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """Load instances from a JSON file and return a list of instances."""
+        filename = f"{cls.__name__}.json"
+        try:
+            with open(filename, 'r') as file:
+                json_string = file.read()
+        except FileNotFoundError:
+            return []
+        dict_list = cls.from_json_string(json_string)
+        instances = [cls.create(**d) for d in dict_list]
+        return instances
+
