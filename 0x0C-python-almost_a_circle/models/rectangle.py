@@ -7,7 +7,6 @@ class Rectangle(Base):
     """ class that inherits from Base with arguments """
 
     def __init__(self, width, height, x=0, y=0, id=None):
-        super().__init__(id)
         """Initialize a Rectangle instance.
 
         Args:
@@ -23,6 +22,7 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
+        super().__init__(id)
 
     @property
     def width(self):
