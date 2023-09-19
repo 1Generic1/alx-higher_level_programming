@@ -30,7 +30,8 @@ class Base:
         """Return the JSON string representation of list_dictionaries.
 
         Args:
-            list_dictionaries (list of dict): List of dictionaries to convert to JSON.
+            list_dictionaries (list of dict): List of
+                dictionaries to convert to JSON.
 
         Returns:
             str: JSON string representation of the list of dictionaries.
@@ -81,4 +82,3 @@ class Base:
         dict_list = cls.from_json_string(json_string)
         instances = [cls.create(**d) for d in dict_list]
         return instances
-
