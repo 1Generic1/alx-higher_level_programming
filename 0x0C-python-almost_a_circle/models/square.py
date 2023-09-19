@@ -15,7 +15,7 @@ class Square(Rectangle):
             id (int): The unique ID of the square (default is None).
         """
         super().__init__(size, size, x, y, id)
-    
+
     @property
     def size(self):
         return self.width
@@ -35,7 +35,7 @@ class Square(Rectangle):
                 3rd argument: x attribute
                 4th argument: y attribute
             **kwargs: Keyword arguments for any attribute.
-        """ 
+        """
         if args and len(args) != 0:
             a = 0
             for arg in args:
@@ -74,7 +74,8 @@ class Square(Rectangle):
                 'x': self.x,
                 'y': self.y
                 }
+
     def __str__(self):
-        """Return the print() and str() representation of a Square."""
+        """ Return the print() and str() representation of a Square."""
         return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
                                                  self.width)
