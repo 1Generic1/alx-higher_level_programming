@@ -3,7 +3,7 @@
 
 USE hbtn_0d_usa;
 
-SELECT cities.id, cities.name
+SELECT id, name
 FROM cities
 WHERE cities.state_id = (SELECT id FROM states WHERE name = 'california')
-ORDER BY cities.id;
+ORDER BY id;
