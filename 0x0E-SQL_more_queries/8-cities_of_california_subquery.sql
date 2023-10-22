@@ -5,7 +5,7 @@ USE hbtn_0d_usa;
 
 SELECT id, name
 FROM cities
-WHERE cities.state_id in
+WHERE state_id IN
 (SELECT id 
 	FROM states 
 	WHERE name = "california")
