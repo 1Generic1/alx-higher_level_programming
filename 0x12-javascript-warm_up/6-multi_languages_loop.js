@@ -1,9 +1,10 @@
 #!/usr/bin/node
-const x = parseInt(process.argv[2]);
-if (!isNaN(x)) {
-  for (let i = 0; i < x; i++) {
-    console.log('C is fun');
-  }
-} else {
-  console.log('Missing number of occurrences');
+
+const lines = [
+  'C is fun',
+  'Python is cool',
+  'JavaScript is amazing'
+];
+for (let i = 0; i < lines.length; i++) {
+  console.log(lines[i]);
 }
