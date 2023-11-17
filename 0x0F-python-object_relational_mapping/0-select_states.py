@@ -9,9 +9,11 @@ Usage: ./list_states.py <username> <password> <database>
 import MySQLdb
 import sys
 
+
 def list_states(username, password, database):
     """
-    Connects to the MySQL server and retrieves a list of states from the specified database.
+    Connects to the MySQL server and retrieves a
+    list of states from the specified database.
 
     Args:
         username (str): MySQL username.
@@ -36,6 +38,7 @@ def list_states(username, password, database):
         print(state)
     cursor.close()
     db.close()
+
 
 if __name__ == "__main__":
     if len(sys.argv) != 4:
