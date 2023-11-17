@@ -9,7 +9,8 @@ import sys
 
 def filter_states_by_name(username, password, database):
     """
-    Connects to the MySQL server and retrieves states with names starting with 'N' from the specified database.
+    Connects to the MySQL server and retrieves states
+    with names starting with 'N' from the specified database.
 
     Args:
         username (str): MySQL username.
@@ -34,7 +35,6 @@ def filter_states_by_name(username, password, database):
         print(state)
     cursor.close()
     db.close()
-
 
 
 if __name__ == "__main__":
