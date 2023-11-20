@@ -7,9 +7,11 @@ where the name matches the provided state name
 import MySQLdb
 import sys
 
+
 def search_states(username, password, database, search_name):
     """
-    Connects to the MySQL server and retrieves values from the states table where the name matches the provided state name.
+    Connects to the MySQL server and retrieves values
+    from the states table where the name matches the provided state name.
 
     Args:
         username (str): MySQL username.
@@ -28,7 +30,11 @@ def search_states(username, password, database, search_name):
         db=database
         )
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(search_name)
+    query = (
+        "SELECT * FROM states "
+        "WHERE name = '{}' "
+        "ORDER BY id ASC".format(search_name)
+        )
     cursor.execute(query)
     states = cursor.fetchall()
     for state in states:
@@ -39,8 +45,11 @@ def search_states(username, password, database, search_name):
 
 if __name__ == "__main__":
     if len(sys.argv) != 5:
-        print("Usage: {} <username> <password> <database> <state_name>".format(sys.argv[0]))
+        print("Usage: {} <username> <password> <database> <state_name>"
+              .format(sys.argv[0]))
         sys.exit(1)
-    username, password, database, search_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
-
+    username = sys.argv[1]
+    password = sys.argv[2]
+    database = sys.argv[3]
+    search_name = sys.argv[4]
 search_states(username, password, database, search_name)
