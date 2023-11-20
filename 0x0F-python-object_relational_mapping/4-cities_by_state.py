@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This script lists all cities from the database 
+This script lists all cities from the database
 hbtn_0e_4_usa
 """
 
@@ -52,4 +52,3 @@ if __name__ == "__main__":
     password = sys.argv[2]
     database = sys.argv[3]
 list_cities(username, password, database)
-
