@@ -28,7 +28,7 @@ def search_states(username, password, database, search_name):
         db=database
         )
     cursor = db.cursor()
-    query = "SELECT * FROM states WHERE name LIKE BINARY '{}' ORDER BY id ASC".format(search_name)
+    query = "SELECT * FROM states WHERE name = '{}' ORDER BY id ASC".format(search_name)
     cursor.execute(query)
     states = cursor.fetchall()
     for state in states:
@@ -43,7 +43,4 @@ if __name__ == "__main__":
         sys.exit(1)
     username, password, database, search_name = sys.argv[1], sys.argv[2], sys.argv[3], sys.argv[4]
 
-    print("Username:", username)
-print("Password:", password)
-print("Database:", database)
-print("Search Name:", search_name)
+search_states(username, password, database, search_name)
