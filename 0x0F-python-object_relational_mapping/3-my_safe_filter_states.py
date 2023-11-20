@@ -32,7 +32,7 @@ def search_states(username, password, database, search_name):
     cursor = db.cursor()
     query = (
         "SELECT * FROM states "
-        "WHERE name = %s "
+        "WHERE name LIKE BINARY %s "
         "ORDER BY id ASC"
         )
     cursor.execute(query, (search_name,))
