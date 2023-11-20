@@ -18,14 +18,10 @@ if __name__ == "__main__":
     database = sys.argv[3]
     search_name = sys.argv[4]
 
-    db = MySQLdb.connect(
-    host="localhost",
-    port=3306,
-    user=username,
-    passwd="Mysqlpassword1$$",
-    db=database
-    )
-    cursor =db.cursor()
+    db = MySQLdb.connect(host="localhost", port=3306,
+                         user=username, passwd="Mysqlpassword1$$",
+                         db=database)
+    cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name LIKE BINARY '{}'"
                    .format(search_name))
     states = cursor.fetchall()
