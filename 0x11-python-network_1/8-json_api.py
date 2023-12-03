@@ -28,7 +28,5 @@ if __name__ == "__main__":
         else:
             if response == {}:
                 print("No result")
-            else:
-                print("Not a valid JSON")
     except ValueError:
         print("Not a valid JSON")
