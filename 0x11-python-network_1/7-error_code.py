@@ -15,6 +15,8 @@ if __name__ == "__main__":
         print(response.text)
         if response.status_code >= 400:
             print("Error code:", response.status_code)
+        else:
+            print(response.text)
     except requests.exceptions.RequestException as e:
         print("Error:", e)
 
