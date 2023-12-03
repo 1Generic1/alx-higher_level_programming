@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-Script to send a GET request to a URL and display the body of the response.
-If the HTTP status code is greater than or equal to 400, print an error message.
+Script to send a GET request to a URL and display the body
+of the response. If the HTTP status code is greater than or
+equal to 400, print an error message.
 """
 
 import requests
