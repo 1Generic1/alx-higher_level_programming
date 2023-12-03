@@ -15,6 +15,8 @@ if __name__ == "__main__":
             "http://0.0.0.0:5000/search_user",
             data={'q': q}
         )
+        if response == {}:
+            print("No result")
         json_response = (
             response.json() if response.headers.get('content-type')
             == 'application/json'
@@ -25,8 +27,5 @@ if __name__ == "__main__":
             json_response.get('id') and json_response.get('name')
         ):
             print("[{}] {}".format(json_response['id'], json_response['name']))
-        else:
-            if response == {}:
-                print("No result")
     except ValueError:
         print("Not a valid JSON")
