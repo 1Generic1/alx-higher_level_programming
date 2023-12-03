@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-Script to send a request to a URL and display the value of the variable "X-Request-Id" in the response header.
+Script to send a request to a URL and display the
+value of the variable "X-Request-Id" in the response header.
 """
 
 import requests
@@ -17,4 +18,4 @@ if __name__ == "__main__":
         else:
             print("X-Request-Id not found in the response header.")
     except requests.exceptions.RequestException as e:
-            print("Error:", e)
+        print("Error:", e)
