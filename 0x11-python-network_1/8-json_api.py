@@ -24,10 +24,9 @@ if __name__ == "__main__":
             json_response and isinstance(json_response, dict) and
             json_response.get('id') and json_response.get('name')
         ):
-            user = json_response
             print("[{}] {}".format(json_response['id'], json_response['name']))
         else:
-            if not response.text:
+            if response == {}:
                 print("No result")
             else:
                 print("Not a valid JSON")
