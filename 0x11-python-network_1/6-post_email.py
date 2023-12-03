@@ -8,7 +8,7 @@ import sys
 if __name__ == "__main__":
     url = sys.argv[1]
     email = sys.argv[2]
-    data = {'enail': email}
+    data = {'email': email}
     try:
         response = requests.post(url, data=data)
         response.raise_for_status()
