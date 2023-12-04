@@ -11,7 +11,10 @@ if __name__ == "__main__":
     repository_name = sys.argv[1]
     owner_name = sys.argv[2]
     try:
-        url = f"https://api.github.com/repos/{owner_name}/{repository_name}/commits"
+        url = (
+            f"https://api.github.com/repos"
+            f"/{owner_name}/{repository_name}/commits"
+        )
         params = {"per_page": 10}
         response = requests.get(url, params=params)
         if response.status_code == 200:
