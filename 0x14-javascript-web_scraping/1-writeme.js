@@ -5,7 +5,6 @@ const fs = require('fs');
 function writeToFile (filePath, content) {
   try {
     fs.writeFileSync(filePath, content, 'utf-8');
-    console.log(`Content successfully written to ${filePath}`);
   } catch (error) {
     console.log(error);
   }
