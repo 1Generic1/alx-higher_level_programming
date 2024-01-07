@@ -7,11 +7,7 @@ function readAndPrintFileContent (filePath) {
     const content = fs.readFileSync(filePath, 'utf-8');
     console.log(content);
   } catch (error) {
-    if (error.code === 'EN0ENT') {
-      console.error(`File not found: ${error.path}`);
-    } else {
-      console.error(`An error occurred: ${error.message}`);
-    }
+    console.log(error);
   }
 }
 if (process.argv.length !== 3) {
