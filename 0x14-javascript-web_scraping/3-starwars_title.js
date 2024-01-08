@@ -12,7 +12,7 @@ const apiUrl = `https://swapi-api.alx-tools.com/api/films/${movieId}`;
 
 request(apiUrl, (error, response, body) => {
   if (error) {
-    console.log(`Error: ${error.message}`);
+    console.log(error);
   } else if (response.statusCode !== 200) {
     console.log(`Unexpected HTTP status code: ${response.statusCode}`);
   } else {
