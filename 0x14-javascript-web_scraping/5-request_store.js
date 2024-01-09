@@ -18,6 +18,5 @@ request(url, (error, response, body) => {
     console.error(`Unexpected HTTP status code: ${response.statusCode}`);
   } else {
     fs.writeFileSync(filePath, body, 'utf-8');
-    console.log(`Webpage content saved to: ${filePath}`);
   }
 });
