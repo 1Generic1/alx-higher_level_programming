@@ -19,11 +19,11 @@ request(apiUrl, { json: true }, (error, response, todos) => {
     const completedTasksByUser = {};
     completedTasks.forEach(todo => {
       if (!completedTasksByUser[todo.userId]) {
-       completedTasksByUser[todo.userId] = 1;
+        completedTasksByUser[todo.userId] = 1;
       } else {
-	completedTasksByUser[todo.userId]++;
+        completedTasksByUser[todo.userId]++;
       }
-  });
+    });
     console.log(completedTasksByUser);
   }
- });
+});
