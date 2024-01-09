@@ -24,6 +24,6 @@ request(apiUrl, { json: true }, (error, response, todos) => {
 	completedTasksByUser[todo.userId]++;
       }
   });
-  console.log(JSON.stringify(completedTasksByUser, null, 2));
+    console.log(completedTasksByUser);
   }
  });
